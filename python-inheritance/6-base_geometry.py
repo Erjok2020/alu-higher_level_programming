@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-"""
-A class that raises an exception with the message
-"""
+"""An empty class"""
+
 
 class BaseGeometry:
-    """ Represents geometry.
-    """
+    """represent a geometry"""
 
     def area(self):
-    """ Raise an exception
-    """
-    raise Exception("area() is not implemented")
-
+        """raise area not implemented exception"""
+        raise Exception("area() is not implemented")
