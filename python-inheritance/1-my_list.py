@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-""" A class, my_class that inherits from list.
-"""
-class Mylist(list):
-    """ My list
-    """
-def print_sorted(self):
-    """"print the list, but sorted.
-    """"
+"""A list that inhert the list object"""
 
-print(sorted(self)
+
+class MyList(list):
+    """Represent a Mylist"""
+
+    def print_sorted(self):
+        '''
+        prints the list, but sorted
+        '''
+        print(sorted(self))
