@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-""" 
-A script that fetches a URL
+"""
+Fetches
 """
 import urllib.request
+
 
 if __name__ == "__main__":
     with urllib.request.urlopen('https://intranet.hbtn.io/status') as reply:
