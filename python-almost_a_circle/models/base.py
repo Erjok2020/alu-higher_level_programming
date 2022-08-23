@@ -118,10 +118,8 @@ class Base:
     """
     @staticmethod
     def draw(list_rectangles, list_squares):
-        
-        creates square and rectangle
-        
-        ink = ('orange', 'yellow', 'red', 'purple', 'blue', 'green')
+              creates square and rectangle
+          ink = ('orange', 'yellow', 'red', 'purple', 'blue', 'green')
         for r in list_rectangles:
             drawing = turtle.Pen(visible=False)
             drawing.pencolor(random(ink))
