@@ -1,21 +1,21 @@
 #!/usr/bin/python3
-""" list all states """
+""" list all states"""
 import MySQLdb
 import sys
 
 
 def get_states():
     """ list from database
-    Arguments:
+    Argument:
         argv[1]: mysql username
         argv[2]: mysql password
         argv[3]: database name
     """
     db = MySQLdb.connect(host="localhost",
-                         port=3306,
-                         user=sys.argv[1],
-                         passwd=sys.argv[2],
-                         db=sys.argv[3])
+                        port=3306,
+                        user=sys.argv[1],
+                        passwd=sys.argv[2],
+                        db=sys.argv[3])
 
     cur = db.cursor()
 
@@ -24,8 +24,8 @@ def get_states():
     for i in rows:
         print(i)
 
-    cur.close()
-    db.close()
+        cur.close()
+        db.close()
 
 
 if __name__ == "__main__":

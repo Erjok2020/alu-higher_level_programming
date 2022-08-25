@@ -1,1 +1,1 @@
-Indepth understanding of python objects
+indepth unstanading on python ORM
