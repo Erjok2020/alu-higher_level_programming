@@ -1,18 +1,13 @@
 #!/usr/bin/python3
-"""Delete all State objects with name containing letter 'a'
-"""
-import sys
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
-from model_state import Base, State
+"""Class definition of a state and an instance Base = declarative_base()"""
+from sqlalchemy import Column, Integer, String, ForeignKey
+from model_state import Base
 
-if __name__ == "__main__":
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]))
-    Session = sessionmaker(bind=engine)
-    session = Session()
 
-    for instance in session.query(State).filter(State.name.like('%a%')):
-        session.delete(instance)
+class City(Base):
+    """Class for City"""
+    __tablename__ = 'cities'
 
-    session.commit()
+    id = Column(Integer, primary_key=True)
+    name = Column(String(128), nullable=False)
+    state_id = Column(Integer, ForeignKey('states.id'))
