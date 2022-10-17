@@ -1,10 +1,11 @@
-
 #!/usr/bin/node
-const args = process.argv;
+const url = process.argv.slice(2)[0];
 const request = require('request');
 
-request
-  .get(args[2])
-  .on('response', function (response) {
-    console.log('code:', response.statusCode);
-  });
+request(url, (error, response, body) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(`code: ${response.statusCode}`);
+  }
+});
